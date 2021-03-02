@@ -31,5 +31,19 @@ public class Main {
         System.out.println("Total: " + calcul);
         sc.nextLine();
 
+        //on affiche les moyens de paiements autorisés
+        if (calcul <=20){
+            System.out.println("Paiement en Cb refusé");
+        }else{
+            System.out.println("Tous moyens de paiements autorisés");
+        }
+
+        //affichage du ticket
+        System.out.println("Chez Xavier");
+        sc.nextLine();
+        System.out.println( "String plat"  + " " + quantite+ " " + calcul );
+        sc.nextLine();
+        System.out.println("a très bientôt");
+        sc.nextLine();
     }
 }
