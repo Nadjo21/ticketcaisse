@@ -35,9 +35,13 @@ public class Main {
         String autrePlat = sc.nextLine();
 
 
+
         // On calcul le total du ticket
         float totalFinal = (sousTotal);
 
+        //declaration variable ticket
+        String ticket;
+        ticket = (plat + " " + quantite + " " +"X"+" "+ Prix +" "+ sousTotal + "EUR");
 
         // condition et boucle  - si autre plat redemander les infos de prix et de quantite
 
@@ -49,10 +53,10 @@ public class Main {
             sc.nextLine();
             System.out.println("Entrez la quantite: ");
             quantite = sc.nextInt();
-            System.out.println("Sous Total: " + Prix * quantite);
-            sc.nextLine();
+            System.out.println("Sous Total: " + (Prix * quantite));
             totalFinal = totalFinal + (Prix * quantite);
             System.out.println(totalFinal);
+            ticket = ticket + (plat + " " + quantite+ " "+ Prix + " "+ sousTotal);
             System.out.println("Y a t il un autre plat?");
             autrePlat = sc.nextLine();
         }
@@ -60,22 +64,15 @@ public class Main {
 
 
         //affichage du ticket
+        System.out.println("-----------------------");
         System.out.println("Restaurant Chez Xavier");
-        sc.nextLine();
-        System.out.println(plat);
-        sc.nextLine();
-        System.out.println(quantite);
-        sc.nextLine();
-        System.out.println(autrePlat);
-        sc.nextLine();
-        System.out.println(quantite);
-        sc.nextLine();
-        System.out.println( totalFinal );
-        sc.nextLine();
-        System.out.println("Total:  "+ totalFinal +" " + "euros");
-        sc.nextLine();
+
+        System.out.println(ticket + " ");
+
+        System.out.println("Total:  "+ totalFinal +" " + "EUR");
+
         System.out.println("Merci de votre visite.A très bientôt");
-        sc.nextLine();
+
 
         //on affiche les moyens de paiements autorisés
         if (totalFinal <=20){
@@ -83,7 +80,7 @@ public class Main {
         }else{
             System.out.println("Tous moyens de paiements autorisés");
         }
-        sc.nextLine();
+        System.out.println("-----------------------");
 
     }
 }
