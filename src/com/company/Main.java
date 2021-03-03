@@ -11,11 +11,8 @@ public class Main {
 
         // On affiche un message pour entrer le plat du client
         System.out.println("Entrez le plat du client : ");
-        sc.nextLine();
-
-
-        // On recupere le plat de la console
         String plat = sc.nextLine();
+
 
         // On entre le prix du plat
         System.out.println("Entrez le prix: ");
@@ -27,9 +24,44 @@ public class Main {
         int quantite = sc.nextInt();
         sc.nextLine();
 
+       // demander s'il y a un autre plat
+        System.out.println("Y a t il un autre plat?");
+        String autrePlat = sc.nextLine();
+
+        // condition et boucle  - si autre plat redemander les infos de prix et de quantite
+
+        while (autrePlat.equals("oui")) {
+            System.out.println("Entrez le plat du client : ");
+            plat = sc.nextLine();
+            System.out.println("Entrez le prix: ");
+            Prix = sc.nextFloat();
+            sc.nextLine();
+            System.out.println("Entrez la quantite: ");
+            quantite = sc.nextInt();
+            sc.nextLine();
+            System.out.println("Y a t il un autre plat?");
+            autrePlat = sc.nextLine();
+        }
+
+
+
         // On calcul le total du ticket
         float calcul = (Prix * quantite);
         System.out.println("Total: " + calcul);
+        sc.nextLine();
+
+
+
+        //affichage du ticket
+        System.out.println("Chez Xavier");
+        sc.nextLine();
+        System.out.println( quantite );
+        sc.nextLine();
+        System.out.println(plat);
+        sc.nextLine();
+        System.out.println(calcul);
+        sc.nextLine();
+        System.out.println("Merci de votre visite.A très bientôt");
         sc.nextLine();
 
         //on affiche les moyens de paiements autorisés
@@ -40,15 +72,5 @@ public class Main {
         }
         sc.nextLine();
 
-
-        //affichage du ticket
-        System.out.println("Chez Xavier");
-        sc.nextLine();
-        System.out.println(plat);
-        System.out.println( quantite );
-        System.out.println(calcul);
-        sc.nextLine();
-        System.out.println("a très bientôt");
-        sc.nextLine();
     }
 }
