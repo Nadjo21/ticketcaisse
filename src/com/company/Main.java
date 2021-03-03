@@ -24,9 +24,20 @@ public class Main {
         int quantite = sc.nextInt();
         sc.nextLine();
 
+        //on calcul un sous total
+        float sousTotal = (Prix * quantite );
+        System.out.println("Sous total: "+sousTotal);
+        sc.nextLine();
+
+
        // demander s'il y a un autre plat
         System.out.println("Y a t il un autre plat?");
         String autrePlat = sc.nextLine();
+
+
+        // On calcul le total du ticket
+        float totalFinal = (sousTotal);
+
 
         // condition et boucle  - si autre plat redemander les infos de prix et de quantite
 
@@ -38,34 +49,36 @@ public class Main {
             sc.nextLine();
             System.out.println("Entrez la quantite: ");
             quantite = sc.nextInt();
+            System.out.println("Sous Total: " + Prix * quantite);
             sc.nextLine();
+            totalFinal = totalFinal + (Prix * quantite);
+            System.out.println(totalFinal);
             System.out.println("Y a t il un autre plat?");
             autrePlat = sc.nextLine();
         }
 
 
 
-        // On calcul le total du ticket
-        float calcul = (Prix * quantite);
-        System.out.println("Total: " + calcul);
-        sc.nextLine();
-
-
-
         //affichage du ticket
-        System.out.println("Chez Xavier");
-        sc.nextLine();
-        System.out.println( quantite );
+        System.out.println("Restaurant Chez Xavier");
         sc.nextLine();
         System.out.println(plat);
         sc.nextLine();
-        System.out.println(calcul);
+        System.out.println(quantite);
+        sc.nextLine();
+        System.out.println(autrePlat);
+        sc.nextLine();
+        System.out.println(quantite);
+        sc.nextLine();
+        System.out.println( totalFinal );
+        sc.nextLine();
+        System.out.println("Total:  "+ totalFinal +" " + "euros");
         sc.nextLine();
         System.out.println("Merci de votre visite.A très bientôt");
         sc.nextLine();
 
         //on affiche les moyens de paiements autorisés
-        if (calcul <=20){
+        if (totalFinal <=20){
             System.out.println("Paiement en Cb refusé");
         }else{
             System.out.println("Tous moyens de paiements autorisés");
