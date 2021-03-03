@@ -13,12 +13,13 @@ public class Main {
         System.out.println("Entrez le plat du client : ");
         sc.nextLine();
 
+
         // On recupere le plat de la console
         String plat = sc.nextLine();
 
         // On entre le prix du plat
         System.out.println("Entrez le prix: ");
-        int prix = sc.nextInt();
+        float Prix = sc.nextFloat ();
         sc.nextLine();
 
         // On entre la quantite du plat commandé
@@ -27,7 +28,7 @@ public class Main {
         sc.nextLine();
 
         // On calcul le total du ticket
-        int calcul = (prix * quantite);
+        float calcul = (Prix * quantite);
         System.out.println("Total: " + calcul);
         sc.nextLine();
 
@@ -37,11 +38,15 @@ public class Main {
         }else{
             System.out.println("Tous moyens de paiements autorisés");
         }
+        sc.nextLine();
+
 
         //affichage du ticket
         System.out.println("Chez Xavier");
         sc.nextLine();
-        System.out.println( "String plat"  + " " + quantite+ " " + calcul );
+        System.out.println(plat);
+        System.out.println( quantite );
+        System.out.println(calcul);
         sc.nextLine();
         System.out.println("a très bientôt");
         sc.nextLine();
