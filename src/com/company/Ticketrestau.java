@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Main {
+public class Ticketrestau {
 
     public static void main(String[] args) {
 
@@ -16,7 +16,7 @@ public class Main {
 
         // On entre le prix du plat
         System.out.println("Entrez le prix: ");
-        float Prix = sc.nextFloat ();
+        float Prix = sc.nextFloat();
         sc.nextLine();
 
         // On entre la quantite du plat commandé
@@ -25,15 +25,14 @@ public class Main {
         sc.nextLine();
 
         //on calcul un sous total
-        float sousTotal = (Prix * quantite );
-        System.out.println("Sous total: "+sousTotal);
+        float sousTotal = (Prix * quantite);
+        System.out.println("Sous total: " + sousTotal);
         sc.nextLine();
 
 
-       // demander s'il y a un autre plat
+        // demander s'il y a un autre plat
         System.out.println("Y a t il un autre plat?");
         String autrePlat = sc.nextLine();
-
 
 
         // On calcul le total du ticket
@@ -41,7 +40,7 @@ public class Main {
 
         //declaration variable ticket
         String ticket;
-        ticket = (plat + " " + quantite + " " +"X"+" "+ Prix +" "+ sousTotal + "EUR");
+        ticket = (plat + " " + quantite + " " + "X" + " " + Prix + " " + sousTotal + "EUR");
 
         // condition et boucle  - si autre plat redemander les infos de prix et de quantite
 
@@ -56,11 +55,10 @@ public class Main {
             System.out.println("Sous Total: " + (Prix * quantite));
             totalFinal = totalFinal + (Prix * quantite);
             System.out.println(totalFinal);
-            ticket = ticket + (plat + " " + quantite+ " "+ Prix + " "+ sousTotal);
+            ticket = ticket + (plat + " " + quantite + " " + Prix + " " + sousTotal);
             System.out.println("Y a t il un autre plat?");
             autrePlat = sc.nextLine();
         }
-
 
 
         //affichage du ticket
@@ -69,18 +67,21 @@ public class Main {
 
         System.out.println(ticket + " ");
 
-        System.out.println("Total:  "+ totalFinal +" " + "EUR");
+        System.out.println("Total:  " + totalFinal + " " + "EUR");
 
         System.out.println("Merci de votre visite.A très bientôt");
 
 
         //on affiche les moyens de paiements autorisés
-        if (totalFinal <=20){
+        if (totalFinal <= 20) {
             System.out.println("Paiement en Cb refusé");
-        }else{
+        } else {
             System.out.println("Tous moyens de paiements autorisés");
         }
         System.out.println("-----------------------");
 
     }
 }
+
+
+
